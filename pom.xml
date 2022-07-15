@@ -275,11 +275,4 @@
 		</pluginManagement>
 	</build>
 
-	<distributionManagement>
-		<repository>
-			<id>github</id>
-			<name>GitHub Packages</name>
-			<!-- <url>https://maven.pkg.github.com/craigory1958/xcom-4j</url> -->
-		</repository>
-	</distributionManagement>
 </project>
