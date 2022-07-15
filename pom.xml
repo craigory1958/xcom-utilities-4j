@@ -1,0 +1,251 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<name>Utilities</name>
+
+	<groupId>xcom</groupId>
+	<artifactId>utils4j</artifactId>
+	<version>1.0.7</version>
+
+	<!-- <parent> <groupId>xcom</groupId> <artifactId>parent</artifactId> <version>0.0.7</version> 
+		<relativePath>../pom.xml</relativePath> </parent> -->
+
+	<properties>
+		<xcom.utils4j.version>1.0.7</xcom.utils4j.version>
+
+		<com.google.code.gson.gson.version>LATEST</com.google.code.gson.gson.version>
+
+		<commons-cli.commons-cli.version>LATEST</commons-cli.commons-cli.version>
+		<commons-dbcp.commons-dbcp.version>LATEST</commons-dbcp.commons-dbcp.version>
+		<commons-io.commons-io.version>LATEST</commons-io.commons-io.version>
+		<commons-fileupload.commons-fileupload.version>LATEST</commons-fileupload.commons-fileupload.version>
+
+		<joda-time.joda-time.version>LATEST</joda-time.joda-time.version>
+
+		<net.sf.jung.jung-api.version>LATEST</net.sf.jung.jung-api.version>
+		<net.sf.jung.jung-graph-impl.version>LATEST</net.sf.jung.jung-graph-impl.version>
+
+		<net.sourceforge.javacsv.javacsv.version>2.0</net.sourceforge.javacsv.javacsv.version>
+
+		<ongl.ongl.version>3.1.14</ongl.ongl.version>
+
+		<org.aspectj.aspectjrt.version>1.7.4</org.aspectj.aspectjrt.version>
+
+		<org.antlr.antlr4-runtime.version>4.5</org.antlr.antlr4-runtime.version>
+
+		<org.apache.commons.commons-lang3.version>3.4</org.apache.commons.commons-lang3.version>
+		<org.apache.bcel.bcel.version>5.2</org.apache.bcel.bcel.version>
+		<org.apache.poi.poi.version>3.15</org.apache.poi.poi.version>
+		<org.apache.poi.poi-ooxml.version>3.15</org.apache.poi.poi-ooxml.version>
+
+		<org.easytesting.fest-reflect.version>LATEST</org.easytesting.fest-reflect.version>
+
+		<org.hsqldb.hsqldb.version>LATEST</org.hsqldb.hsqldb.version>
+
+		<org.reflections.reflections.version>LATEST</org.reflections.reflections.version>
+
+		<org.slf4j.slf4j-api.version>LATEST</org.slf4j.slf4j-api.version>
+		<org.slf4j.slf4j-log4j12.version>LATEST</org.slf4j.slf4j-log4j12.version>
+		<org.slf4j.jcl-over-slf4j.version>LATEST</org.slf4j.jcl-over-slf4j.version>
+
+		<org.springframework.spring-context.version>4.0.3.RELEASE</org.springframework.spring-context.version>
+		<org.springframework.spring-tx.version>4.0.3.RELEASE</org.springframework.spring-tx.version>
+		<org.springframework.spring-webmvc.version>4.0.3.RELEASE</org.springframework.spring-webmvc.version>
+		<org.hibernate.hibernate-core.version>4.0.3.RELEASE</org.hibernate.hibernate-core.version>
+		<org.hibernate.hibernate-entitymanager.version>4.0.3.RELEASE</org.hibernate.hibernate-entitymanager.version>
+
+		<org.mockito.mockito-all.version>1.9.0</org.mockito.mockito-all.version>
+
+		<org.slf4j.slf4j-api.version>LATEST</org.slf4j.slf4j-api.version>
+		<org.slf4j.slf4j-log4j12.version>LATEST</org.slf4j.slf4j-log4j12.version>
+		<org.slf4j.jcl-over-slf4j.version>LATEST</org.slf4j.jcl-over-slf4j.version>
+
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<java.source.level>1.8</java.source.level>
+		<java.target.level>1.8</java.target.level>
+
+
+		<junit.junit.version>4.13.2</junit.junit.version>
+
+		<org.apache.maven.compiler.plugin.version>3.8.1</org.apache.maven.compiler.plugin.version>
+		<org.apache.maven.plugins.maven-eclipse-plugin.version>LATEST</org.apache.maven.plugins.maven-eclipse-plugin.version>
+		<org.apache.maven.plugins.maven.surefire.plugin.version>2.22.0</org.apache.maven.plugins.maven.surefire.plugin.version>
+
+	</properties>
+
+	<dependencies>
+
+		<!-- ANTLR4 Runtime -->
+		<dependency>
+			<groupId>org.antlr</groupId>
+			<artifactId>antlr4-runtime</artifactId>
+			<version>${org.antlr.antlr4-runtime.version}</version>
+		</dependency>
+
+		<!-- Apache Bytecode Libraries -->
+		<dependency>
+			<groupId>org.apache.bcel</groupId>
+			<artifactId>bcel</artifactId>
+			<version>${org.apache.bcel.bcel.version}</version>
+		</dependency>
+
+		<!-- Apache Commons DBCP -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>${commons-dbcp.commons-dbcp.version}</version>
+		</dependency>
+
+		<!-- Apache Commons IO -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.commons-io.version}</version>
+		</dependency>
+
+		<!-- Apache Commons Lang -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${org.apache.commons.commons-lang3.version}</version>
+		</dependency>
+
+		<!-- Apache POI -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${org.apache.poi.poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${org.apache.poi.poi-ooxml.version}</version>
+		</dependency>
+
+		<!-- AspectJ -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${org.aspectj.aspectjrt.version}</version>
+		</dependency>
+
+		<!-- FEST Reflect -->
+		<dependency>
+			<groupId>org.easytesting</groupId>
+			<artifactId>fest-reflect</artifactId>
+			<version>${org.easytesting.fest-reflect.version}</version>
+		</dependency>
+
+		<!-- Google JSON -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${com.google.code.gson.gson.version}</version>
+		</dependency>
+
+		<!-- Google Reflections -->
+		<dependency>
+			<groupId>org.reflections</groupId>
+			<artifactId>reflections</artifactId>
+			<version>${org.reflections.reflections.version}</version>
+		</dependency>
+
+		<!-- Joda Time -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>${joda-time.joda-time.version}</version>
+		</dependency>
+
+		<!-- JUNG (Java Universal Network/Graph Framework) -->
+		<dependency>
+			<groupId>net.sf.jung</groupId>
+			<artifactId>jung-api</artifactId>
+			<version>${net.sf.jung.jung-api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jung</groupId>
+			<artifactId>jung-graph-impl</artifactId>
+			<version>${net.sf.jung.jung-graph-impl.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- OGNL (Object Graph Navigation Library) -->
+		<dependency>
+			<groupId>ognl</groupId>
+			<artifactId>ognl</artifactId>
+			<version>${ongl.ongl.version}</version>
+		</dependency>
+
+		<!-- SourceForge JavaCSV -->
+		<dependency>
+			<groupId>net.sourceforge.javacsv</groupId>
+			<artifactId>javacsv</artifactId>
+			<version>${net.sourceforge.javacsv.javacsv.version}</version>
+		</dependency>
+
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework.spring-webmvc.version}</version>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j.slf4j-api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${org.slf4j.slf4j-log4j12.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Mockito -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>${org.mockito.mockito-all.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Hyper SQL Database -->
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>${org.hsqldb.hsqldb.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/craigory1958/xcom-utilities-4j</url>
+		</repository>
+	</distributionManagement>
+
+
+	<!-- <profiles> <profile> <id>github</id> <distributionManagement> <repository> 
+		<id>github</id> <name>GitHub Packages</name> <url>https://maven.pkg.github.com/dreitier/library-a</url> 
+		</repository> </distributionManagement> </profile> </profiles> -->
+</project>

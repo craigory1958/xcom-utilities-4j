@@ -1,0 +1,39 @@
+
+
+name: Maven Publish
+
+on: [workflow_dispatch]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions: 
+      contents: read
+      packages: write 
+
+    steps:
+    
+      - name: Checkout
+        uses: actions/checkout@v2
+
+
+#      - name: Enable .github scripts
+#        run: chmod +x .github/scripts/*.sh
+#
+#      - name: Decrypt .protected files
+#        run: .github/scripts/decryptProtectedFiles.sh ".protected/.protected"
+#        env:
+#          PROTECTED_FILES_PASSPHRASE: ${{ secrets.PROTECTED_FILES_PASSPHRASE }}
+
+
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'adopt'
+          cache: maven
+
+      - name: build, test, package and publish
+        run: mvn --batch-mode deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
