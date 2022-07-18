@@ -41,5 +41,5 @@ jobs:
         env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER_REF: craigory1958
-          GITHUB_TOKEN_REF: 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
+          GITHUB_TOKEN_REF: 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
           
