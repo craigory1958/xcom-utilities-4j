@@ -39,7 +39,7 @@ jobs:
       - name: build, test, package and publish
         run: mvn --batch-mode -DskipTests deploy
         env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER_REF: craigory1958
           GITHUB_TOKEN_REF: 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
           
