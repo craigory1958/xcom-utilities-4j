@@ -9,7 +9,7 @@
 
 	<groupId>xcom</groupId>
 	<artifactId>utils4j</artifactId>
-	<version>1.0.7</version>
+	<version>1.0.7a</version>
 
 	<!-- <parent> <groupId>xcom</groupId> <artifactId>parent</artifactId> <version>0.0.7</version> 
 		<relativePath>../pom.xml</relativePath> </parent> -->
@@ -280,7 +280,6 @@
 			<id>github</id>
 			<name>GitHub Packages</name>
 			<url>https://maven.pkg.github.com/craigory1958/xcom-maven-repository</url>
-			<!-- <url> https://github.com/craigory1958/xcom-maven-repository</url> -->
 		</repository>
 	</distributionManagement>
 </project>
