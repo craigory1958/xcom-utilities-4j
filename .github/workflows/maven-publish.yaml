@@ -40,6 +40,6 @@ jobs:
         run: mvn --batch-mode -DskipTests deploy
         env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MAVEN_ACCESS_USER: ${{ MAVEN_ACCESS_USER }}
-          MAVEN_ACCESS_TOKEN: ${{ MAVEN_ACCESS_TOKEN }}
+          MAVEN_ACCESS_USER: ${{ secrets.MAVEN_ACCESS_USER }}
+          MAVEN_ACCESS_TOKEN: ${{ secrets.MAVEN_ACCESS_TOKEN }}
           
