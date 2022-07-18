@@ -275,4 +275,11 @@
 		</pluginManagement>
 	</build>
 
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/craigory1958/xcom-maven-repository</url>
+		</repository>
+	</distributionManagement>
 </project>
