@@ -33,13 +33,13 @@ jobs:
           distribution: 'adopt'
           cache: maven
           server-id: github
-          server-usernamne: GITHUB_USER_REF
-          server-password: GITHUB_TOKEN_REF
+          server-usernamne: MAVEN_ACCESS_USER
+          server-password: MAVEN_ACCESS_TOKEN
 
       - name: build, test, package and publish
         run: mvn --batch-mode -DskipTests deploy
         env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_USER_REF: craigory1958
-          GITHUB_TOKEN_REF: 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
+          MAVEN_ACCESS_USER: ${{ MAVEN_ACCESS_USER }}
+          MAVEN_ACCESS_TOKEN: ${{ MAVEN_ACCESS_TOKEN }}
           
