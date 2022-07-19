@@ -107,6 +107,13 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.junit.version}</version>
+		</dependency>
+
 		<!-- OGNL (Object Graph Navigation Library) -->
 		<dependency>
 			<groupId>ognl</groupId>
