@@ -8,12 +8,12 @@
 	<name>Utilities</name>
 
 	<artifactId>utils4j</artifactId>
-	<version>${xcom.utils4j.version}</version>
+	<version>1.0.7a</version>
 
 	<parent>
 		<groupId>xcom</groupId>
 		<artifactId>parent</artifactId>
-		<version>0.0.7a</version>
+		<version>0.0.7b</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
