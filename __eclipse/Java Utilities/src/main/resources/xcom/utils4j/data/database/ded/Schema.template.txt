@@ -1,0 +1,55 @@
+
+
+package xcom.<@dbPackage@>.database ;
+
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.io.FileUtils;
+
+import xcom.utils4j.data.database.ded.Schema;
+import xcom.utils4j.logging.aspects.api.annotations.Log;
+
+
+public class <@db@> extends Schema {
+
+	public enum Tables {
+<@dbTables@>
+	}
+<@dbEnums@>
+
+
+<@dbConstants@>
+<@dbSQLs@>
+ 
+    @Log
+    public static List<String> getTableNames() {
+
+        List<String> names = new ArrayList<String>() ;
+
+        for ( Tables table : Tables .values() )
+            names .add(table .name()) ;
+
+        return ( names ) ;
+    }
+    
+    
+    @Log
+    static String loadSQLScript(String resource) { 
+
+        String results = null;
+        try {
+            results = FileUtils.readFileToString(new File(<@db@>.class.getClass().getResource(resource).toURI()));
+
+        } catch ( IOException | URISyntaxException e ) {}
+
+        return results;
+    }
+<@dbParms@>
+}
