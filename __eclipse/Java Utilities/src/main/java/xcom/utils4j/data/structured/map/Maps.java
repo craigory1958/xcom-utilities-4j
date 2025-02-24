@@ -10,6 +10,7 @@ import java.util.HashMap ;
 import java.util.LinkedHashMap ;
 import java.util.List ;
 import java.util.Map ;
+import java.util.Map.Entry ;
 import java.util.TreeMap ;
 
 import xcom.utils4j.logging.aspects.api.annotations.Log ;
@@ -82,5 +83,57 @@ public abstract class Maps {
 		m.put(key, value) ;
 
 		return m.entrySet().iterator().next() ;
+	}
+
+	public static <K, V> Map.Entry<K, V> firstEntry(Map<K, V> map) {
+
+		if ( map == null || map.isEmpty() )
+			return null ;
+
+		return (Entry<K, V>) map.entrySet().iterator().next() ;
+	}
+
+	public static <K, V> K firstEntryKey(Map<K, V> map) {
+
+		if ( map == null || map.isEmpty() )
+			return null ;
+
+		return Maps.firstEntry(map).getKey() ;
+	}
+
+	public static <K, V> V firstEntryValue(Map<K, V> map) {
+
+		if ( map == null || map.isEmpty() )
+			return null ;
+
+		return Maps.firstEntry(map).getValue() ;
+	}
+
+	public static <K, V> Map.Entry<K, V> lastEntry(Map<K, V> map) {
+
+		if ( map == null || map.isEmpty() )
+			return null ;
+
+		Map.Entry<K, V> entry = null ;
+		for ( Map.Entry<K, V> _entry : map.entrySet() )
+			entry = _entry ;
+
+		return entry ;
+	}
+
+	public static <K, V> K lastEntryKey(Map<K, V> map) {
+
+		if ( map == null || map.isEmpty() )
+			return null ;
+
+		return Maps.lastEntry(map).getKey() ;
+	}
+
+	public static <K, V> V lastEntryValue(Map<K, V> map) {
+
+		if ( map == null || map.isEmpty() )
+			return null ;
+
+		return Maps.lastEntry(map).getValue() ;
 	}
 }
