@@ -28,7 +28,7 @@ public class Parser implements iParse {
 //	String packageName ;
 
 	org.antlr.v4.runtime.Parser parser ;
-	
+
 	public org.antlr.v4.runtime.Parser getParser() {
 		return parser ;
 	}
@@ -45,15 +45,15 @@ public class Parser implements iParse {
 
 		// Instantiate lexer ...
 		{
-			final String classname = (packageName.isEmpty() ? "" : packageName + ".") + grammar + "Lexer" ;
-			this.lexer = (Lexer) Reflects.loadClass(classname).withParameterTypes(CharStream.class).newInstance(new ANTLRInputStream("")) ;
+			final String classname = (packageName.isEmpty() ? "" : packageName + '.') + grammar + "Lexer" ;
+			lexer = (Lexer) Reflects.loadClass(classname).withParameterTypes(CharStream.class).newInstance(new ANTLRInputStream("")) ;
 			LOGGER.debug("Instantiated lexer '{}'", lexer.getClass().getName()) ;
 		}
 
 		// Instantiate parser ...
 		{
-			final String classname = (packageName.isEmpty() ? "" : packageName + ".") + grammar + "Parser" ;
-			this.parser = (org.antlr.v4.runtime.Parser) Reflects.loadClass(classname).withParameterTypes(TokenStream.class)
+			final String classname = (packageName.isEmpty() ? "" : packageName + '.') + grammar + "Parser" ;
+			parser = (org.antlr.v4.runtime.Parser) Reflects.loadClass(classname).withParameterTypes(TokenStream.class)
 					.newInstance(new CommonTokenStream(lexer)) ;
 			LOGGER.debug("Instantiated parser '{}'", getParser().getClass().getName()) ;
 		}

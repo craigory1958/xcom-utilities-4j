@@ -61,7 +61,7 @@ public class Factories {
 
 		final Map<String, Object> values = generateBuildImplementationValues(factoryClassname, implementation, implementationSeparator) ;
 
-		values.put("classname", factoryClassname.substring(factoryClassname.lastIndexOf(".") + 1, factoryClassname.length() - 7)) ;
+		values.put("classname", factoryClassname.substring(factoryClassname.lastIndexOf('.') + 1, factoryClassname.length() - 7)) ;
 
 		final String _buildClassnameTemplate =
 				(StringUtils.trimToNull(buildClassnameTemplate) == null ? DefaultBuildClassnameTemplate : buildClassnameTemplate) ;
@@ -103,7 +103,7 @@ public class Factories {
 
 		final Map<String, Object> values = generateBuildImplementationValues(interfaceClassname, implementation, implementationSeparator) ;
 
-		values.put("classname", interfaceClassname.substring(interfaceClassname.lastIndexOf(".") + 2)) ;
+		values.put("classname", interfaceClassname.substring(interfaceClassname.lastIndexOf('.') + 2)) ;
 
 		final String _buildClassnameTemplate =
 				(StringUtils.trimToNull(buildClassnameTemplate) == null ? DefaultBuildClassnameTemplate : buildClassnameTemplate) ;
@@ -132,7 +132,7 @@ public class Factories {
 		results.put("implementation", implementation) ;
 
 
-		final int endOfPackageName = classname.lastIndexOf(".") ;
+		final int endOfPackageName = classname.lastIndexOf('.') ;
 
 		final String packageName = (endOfPackageName == -1 ? "" : classname.substring(0, endOfPackageName)) ;
 		results.put("packageName", packageName) ;

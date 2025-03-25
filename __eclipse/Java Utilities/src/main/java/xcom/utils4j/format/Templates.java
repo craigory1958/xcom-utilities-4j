@@ -34,13 +34,13 @@ public abstract class Templates {
 	 * <li>Delimiters may be 1 or more characters in length.</li>
 	 * </ul>
 	 *
-	 * @param  template
-	 *                           - Template containing tags to be replaced.
-	 * @param  tagDelimiters
-	 *                           - An array containing the OpenTagDelimiter and CloseTagDelimiter.
-	 * @param  values
-	 *                           - Values to be injected into the template.
-	 * @return               Template with tags replaced with values.
+	 * @param template
+	 *            - Template containing tags to be replaced.
+	 * @param tagDelimiters
+	 *            - An array containing the OpenTagDelimiter and CloseTagDelimiter.
+	 * @param values
+	 *            - Values to be injected into the template.
+	 * @return Template with tags replaced with values.
 	 */
 	@Log
 	public static StringBuilder replaceTags(final StringBuilder template, final String[] tagDelimiters, final Map<String, Object> values) {
@@ -77,7 +77,7 @@ public abstract class Templates {
 				results.replace(beg + offset, end + offset, replacement) ;
 				offset += replacement.length() - (end - beg) ;
 			}
-			
+
 			template_ = new StringBuilder(results) ;
 		}
 
@@ -97,13 +97,13 @@ public abstract class Templates {
 	 * The size of the list determines the number of times a tag is repeated. The repeating tag is processed once for each item in the values list. During each
 	 * repeat, the corresponding <code>Map</code> from the list of values is used for value replacement.
 	 *
-	 * @param  template
-	 *                                 - Template containing tags to be replaced.
-	 * @param  tagDelimiters
-	 * @param  repeatingDelimiters
-	 * @param  repeatValues
-	 *                                 - A list of values sets.
-	 * @return                     Template with tags replaced with values.
+	 * @param template
+	 *            - Template containing tags to be replaced.
+	 * @param tagDelimiters
+	 * @param repeatingDelimiters
+	 * @param repeatValues
+	 *            - A list of values sets.
+	 * @return Template with tags replaced with values.
 	 */
 	@Log
 	public static StringBuilder replaceRepeatedTags(final StringBuilder template, final String[] tagDelimiters, final String[] repeatingDelimiters,

@@ -70,9 +70,9 @@ public abstract class Templator {
 		 * Instantiate a Templated object with the formatting template and markup delimiters.
 		 *
 		 * @param delimited
-		 *                      - The markup delimiters.
+		 *            - The markup delimiters.
 		 * @param template
-		 *                      - The formatting template.
+		 *            - The formatting template.
 		 */
 		@Log
 		public Templator$Templated(final Templator$Delimited delimited) {
@@ -120,7 +120,7 @@ public abstract class Templator {
 
 
 		/**
-		 * @param  values
+		 * @param values
 		 * @return
 		 */
 		@Log
@@ -135,7 +135,7 @@ public abstract class Templator {
 
 
 		/**
-		 * @param  values
+		 * @param values
 		 * @return
 		 */
 		@Log
@@ -161,9 +161,9 @@ public abstract class Templator {
 		 * Instantiate a Templated object with the formatting template and markup delimiters.
 		 *
 		 * @param delimited
-		 *                      - The markup delimiters.
+		 *            - The markup delimiters.
 		 * @param template
-		 *                      - The formatting template.
+		 *            - The formatting template.
 		 */
 		@Log
 		public Templator$TemplatedAsStringBuilder(final Templator$Delimited delimited, final StringBuilder template) {
@@ -175,8 +175,8 @@ public abstract class Templator {
 		/**
 		 * Inject a values <code>Array</code> into the formatting template.
 		 *
-		 * @param  values
-		 *                    - The values to be injected.
+		 * @param values
+		 *            - The values to be injected.
 		 * @return
 		 */
 		@Log
@@ -188,7 +188,7 @@ public abstract class Templator {
 		/**
 		 * Inject a values <code>List</code> into the formatting template.
 		 *
-		 * @param  values
+		 * @param values
 		 * @return
 		 */
 		@Log
@@ -200,7 +200,7 @@ public abstract class Templator {
 		/**
 		 * Inject a values <code>Map</code> into the formatting template.
 		 *
-		 * @param  values
+		 * @param values
 		 * @return
 		 */
 		@Log
@@ -227,9 +227,9 @@ public abstract class Templator {
 		 * Instantiate a Templated object with the formatting template and markup delimiters.
 		 *
 		 * @param delimited
-		 *                      - The markup delimiters.
+		 *            - The markup delimiters.
 		 * @param template
-		 *                      - The formatting template.
+		 *            - The formatting template.
 		 */
 		@Log
 		public Templator$TemplatedAsString(final Templator$Delimited delimited, final String template) {
@@ -241,8 +241,8 @@ public abstract class Templator {
 		/**
 		 * Inject a values <code>Array</code> into the formatting template.
 		 *
-		 * @param  values
-		 *                    - The values to be injected.
+		 * @param values
+		 *            - The values to be injected.
 		 * @return
 		 */
 		@Log
@@ -254,7 +254,7 @@ public abstract class Templator {
 		/**
 		 * Inject a values <code>List</code> into the formatting template.
 		 *
-		 * @param  values
+		 * @param values
 		 * @return
 		 */
 		@Log
@@ -266,7 +266,7 @@ public abstract class Templator {
 		/**
 		 * Inject a values <code>Map</code> into the formatting template.
 		 *
-		 * @param  values
+		 * @param values
 		 * @return
 		 */
 		@Log
@@ -441,7 +441,7 @@ public abstract class Templator {
 
 
 		/**
-		 * @param  template
+		 * @param template
 		 * @return
 		 */
 		@Log

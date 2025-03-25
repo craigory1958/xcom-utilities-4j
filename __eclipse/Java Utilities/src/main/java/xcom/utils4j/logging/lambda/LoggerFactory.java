@@ -10,7 +10,7 @@ import xcom.utils4j.logging.lambda.defaultlogger.DefaultLoggerFactory ;
  * Create {@link Logger} instance.
  */
 public abstract class LoggerFactory {
-	
+
 	private static ILoggerFactory lambdaLoggerFactory ;
 	static {
 		lambdaLoggerFactory = new DefaultLoggerFactory(org.slf4j.LoggerFactory.getILoggerFactory()) ;

@@ -70,7 +70,9 @@ public abstract class Excels {
 
 
 	@Log
-	private Excels() { throw new UnsupportedOperationException();}
+	private Excels() {
+		throw new UnsupportedOperationException() ;
+	}
 
 
 	/**
@@ -147,7 +149,7 @@ public abstract class Excels {
 
 		String results = "" ;
 
-		if ( cell != null ) {
+		if ( cell != null )
 			switch ( cell.getCellType() ) {
 				case BOOLEAN:
 					results = Boolean.toString(cell.getBooleanCellValue()).trim() ;
@@ -211,7 +213,6 @@ public abstract class Excels {
 				default:
 					break ;
 			}
-		}
 
 		results = StringUtils.trimToEmpty(results) ;
 

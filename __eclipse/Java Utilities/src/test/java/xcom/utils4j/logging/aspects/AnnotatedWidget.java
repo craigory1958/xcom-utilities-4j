@@ -10,19 +10,19 @@ import xcom.utils4j.logging.aspects.api.annotations.NoLog ;
 @Log
 public class AnnotatedWidget {
 
-	public AnnotatedWidget(Object parm1, @NoLog Object parm2) {}
+	public AnnotatedWidget(final Object parm1, @NoLog final Object parm2) {}
 
 
 	public AnnotatedWidget() {}
 
 
-	public void methodWParamsWOReturn(Object parm1, @NoLog Object parm2) {}
+	public void methodWParamsWOReturn(final Object parm1, @NoLog final Object parm2) {}
 
 
 	public void methodWOParamsWOReturn() {}
 
 
-	public Object methodWParamsWReturn(Object parm1, @NoLog Object parm2) {
+	public Object methodWParamsWReturn(final Object parm1, @NoLog final Object parm2) {
 		return null ;
 	}
 

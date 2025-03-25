@@ -132,7 +132,7 @@ public abstract class SupervisorScaffold extends JDialog implements IWorkable, I
 
 
 	public void supervisorWindowClosing(final WindowEvent e) {
-		
+
 		for ( final IWorker worker : workers )
 			((Thread) worker).interrupt() ;
 	}

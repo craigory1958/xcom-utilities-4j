@@ -19,10 +19,10 @@ import xcom.utils4j.logging.aspects.api.annotations.Log ;
 public class MapBuilder<K, V> implements iKeyBuilder<K, V>, iValueBuilder<K, V> {
 
 	final List<Entry<K, V>> entries ;
-	
+
 	K key ;
 
-	
+
 	@Log
 	public MapBuilder() {
 		this.entries = new ArrayList<>() ;

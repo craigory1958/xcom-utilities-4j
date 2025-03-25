@@ -40,7 +40,7 @@ public class Files {
 
 			if ( StringUtils.trimToEmpty(FilenameUtils.getExtension(spec)).isEmpty()
 					&& !StringUtils.trimToEmpty(FilenameUtils.getExtension(specs[i])).isEmpty() )
-				spec = spec + "." + FilenameUtils.getExtension(specs[i]) ;
+				spec = spec + '.' + FilenameUtils.getExtension(specs[i]) ;
 //			System.out.println("1>" + spec) ;
 
 			if ( StringUtils.trimToEmpty(FilenameUtils.getBaseName(spec)).isEmpty() && !StringUtils.trimToEmpty(FilenameUtils.getBaseName(specs[i])).isEmpty() )
@@ -64,7 +64,7 @@ public class Files {
 
 
 	@Log
-	public static String getAbsoluteBaseName(String fnSpec) {
+	public static String getAbsoluteBaseName(final String fnSpec) {
 
 		String baseName = FilenameUtils.getBaseName(fnSpec) ;
 		while ( !baseName.equals((baseName = FilenameUtils.getBaseName(baseName))) ) {}
@@ -88,12 +88,12 @@ public class Files {
 
 
 	@Log
-	public static File parentedFile(String fileSpec) {
+	public static File parentedFile(final String fileSpec) {
 
 		File file ;
 		File parent ;
 
-		if ( (parent = (file = new File(fileSpec)).getParentFile()) != null && !parent.exists() )
+		if ( ((parent = (file = new File(fileSpec)).getParentFile()) != null) && !parent.exists() )
 			parent.mkdirs() ;
 
 		return file ;

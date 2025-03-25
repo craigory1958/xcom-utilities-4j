@@ -24,9 +24,9 @@ public abstract class Patterns {
 	/**
 	 * Convert pattern meta-characters to properly escaped characters.
 	 *
-	 * @param  metaCharacters
-	 *                            Character string to convert.
-	 * @return                string with properly escaped meta characters.
+	 * @param metaCharacters
+	 *            Character string to convert.
+	 * @return string with properly escaped meta characters.
 	 */
 	@Log
 	public static String escapeMetaCharacters(final String metaCharacters) {

@@ -231,13 +231,13 @@ abstract public class Dial<T> extends JComponent {
 
 		{
 			g2.setFont(g2.getFont().deriveFont(14.0f)) ;
-			float x1 = xC - (g2.getFontMetrics().stringWidth(title) * .5f) ;
+			final float x1 = xC - (g2.getFontMetrics().stringWidth(title) * .5f) ;
 			g2.drawString(title, x1, yC + 70) ;
 		}
 
 
 		if ( events.size() >= minEventsToRecord ) {
-			
+
 			// Value
 			{
 				final int x2 = (int) ((radius + 7) * Math.cos(Math.toRadians((int) _cur - begAngle))) ;
@@ -248,7 +248,7 @@ abstract public class Dial<T> extends JComponent {
 
 				g2.setFont(g2.getFont().deriveFont(14.0f)) ;
 				final String text = String.format(curFormat, curValue * unitFactor, (isPerUnit ? "/" : " "), unitsTitle) ;
-				float x1 = xC - (g2.getFontMetrics().stringWidth(text) * .5f) ;
+				final float x1 = xC - (g2.getFontMetrics().stringWidth(text) * .5f) ;
 
 				g2.setStroke(new BasicStroke(1)) ;
 				g2.drawString(text, x1, yC + 50) ;
@@ -257,7 +257,7 @@ abstract public class Dial<T> extends JComponent {
 			// Average
 			{
 				drawTickMark((int) _avg - begAngle, xC, yC, radius, 14, g2, new BasicStroke(2)) ;
-				
+
 				final String text = String.format(avgFormat, avgValue * unitFactor, (isPerUnit ? "/" : " "), unitsTitle) ;
 				drawTickText(text, xC, yC, avgValue, _avg, g2, new BasicStroke(1), g2.getFont().deriveFont(12.0f)) ;
 			}
@@ -265,7 +265,7 @@ abstract public class Dial<T> extends JComponent {
 			// Max
 			{
 				drawTickMark((int) _max - begAngle, xC, yC, radius, 14, g2, new BasicStroke(2)) ;
-				
+
 				final String text = String.format(maxFormat, maxValue * unitFactor, (isPerUnit ? "/" : " "), unitsTitle) ;
 				drawTickText(text, xC, yC, maxValue, _max, g2, new BasicStroke(1), g2.getFont().deriveFont(12.0f)) ;
 			}
@@ -289,7 +289,8 @@ abstract public class Dial<T> extends JComponent {
 
 
 	@Log
-	void drawTickText(String text, int xC, int yC, float maxValue, float _max, Graphics2D g2, BasicStroke stroke, Font font) {
+	void drawTickText(final String text, final int xC, final int yC, final float maxValue, final float _max, final Graphics2D g2, final BasicStroke stroke,
+			final Font font) {
 
 		g2.setFont(font) ;
 		g2.setStroke(stroke) ;

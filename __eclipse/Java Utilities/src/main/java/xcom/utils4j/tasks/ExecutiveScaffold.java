@@ -96,7 +96,12 @@ public abstract class ExecutiveScaffold implements IExecutive {
 	@Log
 	public void bootstrapSwing(final JFrame appWindow, final Properties props, final IManager manager, final String settings) {
 
-		SwingUtilities.invokeLater(() -> createGUI(appWindow, props, manager, settings)) ;
+		SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				createGUI(appWindow, props, manager, settings) ;
+			}
+		}) ;
 	}
 
 

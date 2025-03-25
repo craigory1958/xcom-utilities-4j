@@ -110,7 +110,7 @@ public abstract class Query {
 
 	@Log
 	Query() {}
-	
+
 
 	/**
 	 *

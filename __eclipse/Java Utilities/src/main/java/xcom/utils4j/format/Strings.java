@@ -24,9 +24,9 @@ public abstract class Strings {
 	/**
 	 * Returns a string with the number of spaces given as length parameter
 	 *
-	 * @param  length
-	 *                    Number of spaces string will have
-	 * @return        String object with number of spaces
+	 * @param length
+	 *            Number of spaces string will have
+	 * @return String object with number of spaces
 	 */
 	@Log
 	public static String fillStringWithSpaces(final int length) {
@@ -37,11 +37,11 @@ public abstract class Strings {
 	/**
 	 * Returns string containing the given character length amount of times
 	 *
-	 * @param  length
-	 *                    Number of fill characters string will have
-	 * @param  fill
-	 *                    Character string will contain
-	 * @return        String containing the given character length amount of times
+	 * @param length
+	 *            Number of fill characters string will have
+	 * @param fill
+	 *            Character string will contain
+	 * @return String containing the given character length amount of times
 	 */
 	@Log
 	public static String fillString(final int length, final char fill) {

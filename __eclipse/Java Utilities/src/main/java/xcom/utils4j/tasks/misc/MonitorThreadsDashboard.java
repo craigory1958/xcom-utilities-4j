@@ -29,9 +29,9 @@ import xcom.utils4j.tasks.api.interfaces.IWorkerObserverEvent ;
 
 /**
  * A dashboard for a <code>Launcher</code> (area under header).
- * 
+ *
  * This dashboard displays the list of all <code>Worker</code> tasks threads.
- * 
+ *
  * @author Craig J. Gregory
  *
  */
@@ -45,7 +45,7 @@ public class MonitorThreadsDashboard extends ManagerScaffold implements IWorkerO
 
 
 	@Log
-	MonitorThreadsDashboard(String[] args, Properties props, MonitorGUI gui) {
+	MonitorThreadsDashboard(final String[] args, final Properties props, final MonitorGUI gui) {
 
 		super(args, props, gui) ;
 
@@ -65,7 +65,7 @@ public class MonitorThreadsDashboard extends ManagerScaffold implements IWorkerO
 		}
 
 		{
-			Timer timer = new Timer(1000, this) ;
+			final Timer timer = new Timer(1000, this) ;
 //			timer.setInitialDelay(5000) ;
 			timer.start() ;
 		}
@@ -89,12 +89,12 @@ public class MonitorThreadsDashboard extends ManagerScaffold implements IWorkerO
 	 */
 	@Log
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(final ActionEvent e) {
 
 		log.setText(null) ;
 
 		for ( final Thread thread : Thread.getAllStackTraces().keySet() )
-			if ( thread.getThreadGroup() != null && thread.getName().startsWith(threadPrefix) )
+			if ( (thread.getThreadGroup() != null) && thread.getName().startsWith(threadPrefix) )
 				log.append(thread.getThreadGroup().toString() + ", " + thread.getId() + ", " + thread.getName() + ", " + thread.getState() + ", "
 						+ thread.getPriority() + "\n") ;
 	}

@@ -44,14 +44,15 @@ public abstract class CLArgs {
 	}
 
 
-	public CLArgs(CommandLine cmd, Properties props) {
+	public CLArgs(final CommandLine cmd, final Properties props) {
 		this.cmd = cmd ;
 		this.props = props ;
 	}
 
 
 	@Log
-	public void decodeCommandLine(final CommandLine cmd, final Options options, final Properties props, CLArgs args, Logger logger) throws ParseException {
+	public void decodeCommandLine(final CommandLine cmd, final Options options, final Properties props, final CLArgs args, final Logger logger)
+			throws ParseException {
 
 		if ( args.cmdArgs == null )
 			args.cmdArgs = new HashMap<>() ;
@@ -70,9 +71,8 @@ public abstract class CLArgs {
 					) ;
 				}
 				catch ( final ReflectionError | IllegalArgumentException e ) {
-					if ( !optName.equals(CLArg_Help) ) {
+					if ( !optName.equals(CLArg_Help) )
 						logger.error("Could not find argument decoder for -{}", optName) ;
-					}
 				}
 			}
 
@@ -80,7 +80,7 @@ public abstract class CLArgs {
 	}
 
 	@Log
-	public abstract void validateCommandLine(CommandLine cmd, final Options options) throws ParseException;
+	public abstract void validateCommandLine(CommandLine cmd, final Options options) throws ParseException ;
 
 
 	@Log

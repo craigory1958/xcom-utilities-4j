@@ -7,11 +7,10 @@ import java.io.IOException ;
 import java.time.LocalDate ;
 import java.time.format.DateTimeFormatter ;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat ;
 import com.fasterxml.jackson.core.JsonGenerator ;
 import com.fasterxml.jackson.databind.SerializerProvider ;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer ;
-
 
 
 public class MaskableLocalDateSerializer extends LocalDateSerializer {
@@ -30,7 +29,7 @@ public class MaskableLocalDateSerializer extends LocalDateSerializer {
 
 
 	@Override
-	protected LocalDateSerializer withFormat(final Boolean useTimestamp, final DateTimeFormatter dtf, JsonFormat.Shape shape) {
+	protected LocalDateSerializer withFormat(final Boolean useTimestamp, final DateTimeFormatter dtf, final JsonFormat.Shape shape) {
 		return new MaskableLocalDateSerializer(this, useTimestamp, dtf) ;
 	}
 

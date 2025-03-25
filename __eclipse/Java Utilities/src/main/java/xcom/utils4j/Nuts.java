@@ -8,18 +8,18 @@ import org.slf4j.helpers.MessageFormatter ;
 
 public class Nuts {
 
-	public static void exit(String msg, Object... args) {
+	public static void exit(final String msg, final Object... args) {
 
 		if ( error(msg, args) )
 			System.exit(0) ;
 	}
 
 
-	public static boolean error(String msg, Object... args) {
+	public static boolean error(final String msg, final Object... args) {
 
 		boolean isError = false ;
 
-		if ( args != null && args.length > 0 && args[0] instanceof Boolean )
+		if ( (args != null) && (args.length > 0) && (args[0] instanceof Boolean) )
 			isError = (boolean) args[0] ;
 
 		else

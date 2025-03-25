@@ -48,7 +48,7 @@ public class AnnotatedWorkableManager extends ManagerScaffold {
 
 
 	@Log
-	public AnnotatedWorkableManager(String[] args, Properties props, MonitorGUI gui) {
+	public AnnotatedWorkableManager(final String[] args, final Properties props, final MonitorGUI gui) {
 
 		super(args, props, gui) ;
 
@@ -79,7 +79,7 @@ public class AnnotatedWorkableManager extends ManagerScaffold {
 
 		Logger.info("Scanning classpath '{}.*' for {} ...", classpath, annotation) ;
 
-		Map<String, Class<?>> launchables = new TreeMap<>() ;
+		final Map<String, Class<?>> launchables = new TreeMap<>() ;
 
 		try {
 			@SuppressWarnings("unchecked")
@@ -105,7 +105,7 @@ public class AnnotatedWorkableManager extends ManagerScaffold {
 
 	@Log
 	@Override
-	public void observeIWorkerObserver(IWorkerObserverEvent event) {}
+	public void observeIWorkerObserver(final IWorkerObserverEvent event) {}
 
 
 	//
@@ -144,7 +144,7 @@ public class AnnotatedWorkableManager extends ManagerScaffold {
 			}
 
 
-			if ( !hasMonitor ) {
+			if ( !hasMonitor )
 				try {
 					final String classname = getProps().getProperty("supervisor.monitor.classname") ;
 					Logger.debug("{}: {}", "supervisor.monitor.classname", classname) ;
@@ -160,7 +160,6 @@ public class AnnotatedWorkableManager extends ManagerScaffold {
 				catch ( final ReflectionError e ) {
 					e.printStackTrace() ;
 				}
-			}
 		}
 	}
 }

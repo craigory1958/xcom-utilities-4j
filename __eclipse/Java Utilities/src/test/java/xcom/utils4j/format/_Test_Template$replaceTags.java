@@ -49,9 +49,9 @@ public class _Test_Template$replaceTags {
                 { {""}, {null, null}, {}, {new IllegalArgumentException()} },
                 { {""}, {"", ""}, {}, {new IllegalArgumentException()} },
 
-                { {""}, DefaultDelimiters, {null, "."}, {""} },
-                { {""}, DefaultDelimiters, {".", null}, {""} },
-                { {""}, DefaultDelimiters, {".", "."}, {""} },
+                { {""}, DefaultDelimiters, {null, '.'}, {""} },
+                { {""}, DefaultDelimiters, {'.', null}, {""} },
+                { {""}, DefaultDelimiters, {'.', '.'}, {""} },
 
                 { {""}, DefaultDelimiters, {"Value1", "Value2"}, {""} },
                 { {"Nothing tagged"}, DefaultDelimiters, {"Value1", "Value2"}, {"Nothing tagged"} },

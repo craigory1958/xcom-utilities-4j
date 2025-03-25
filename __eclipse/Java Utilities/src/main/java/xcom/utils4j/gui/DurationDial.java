@@ -6,6 +6,7 @@ package xcom.utils4j.gui ;
 import java.time.temporal.ChronoUnit ;
 import java.util.ArrayList ;
 import java.util.concurrent.TimeUnit ;
+import java.util.function.ToLongFunction ;
 
 import javax.swing.JFrame ;
 
@@ -48,8 +49,18 @@ public class DurationDial extends Dial<Long> {
 
 		if ( events.size() >= minEventsToRecord ) {
 			curValue = events.get(events.size() - 1) ;
-			avgValue = (float) (events.stream().mapToLong(f -> (long) f).sum()) / (float) events.size() ;
-			maxValue = (float) (events.stream().mapToLong(f -> (long) f).max().orElse((long) curValue)) ;
+			avgValue = (float) (events.stream().mapToLong(new ToLongFunction<Long>() {
+				@Override
+				public long applyAsLong(Long f) {
+					return (long) f ;
+				}
+			}).sum()) / (float) events.size() ;
+			maxValue = (events.stream().mapToLong(new ToLongFunction<Long>() {
+				@Override
+				public long applyAsLong(Long f) {
+					return (long) f ;
+				}
+			}).max().orElse((long) curValue)) ;
 		}
 	}
 

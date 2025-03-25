@@ -64,7 +64,7 @@ public class Props {
 			System.out.println(new File(clazz.getResource(clazz.getSimpleName() + ".properties").toURI().getPath())) ;
 //			FileUtils.writeStringToFile(new File(clazz.getResource(clazz.getSimpleName() + ".properties").toURI()), "UTF-8") ;
 		}
-		catch ( URISyntaxException e ) {
+		catch ( final URISyntaxException e ) {
 //			catch ( IOException | URISyntaxException e ) {
 			Logger.error("Error writting setting file: |{}|", e) ;
 		}
@@ -77,19 +77,20 @@ public class Props {
 		try {
 			return merge(new Properties(), PropagateException, fileSpecs) ;
 		}
-		catch ( IOException e ) {}
+		catch ( final IOException e ) {}
 
 		return null ;
 	}
 
 	@Log
-	public static Properties load(PropagateExceptionTypes p, final String... fileSpecs) throws FileNotFoundException, IOException {
+	public static Properties load(final PropagateExceptionTypes p, final String... fileSpecs) throws FileNotFoundException, IOException {
 		return merge(new Properties(), PropagateException, fileSpecs) ;
 	}
 
 	@SuppressWarnings("deprecation")
 	@Log
-	public static Properties merge(final Properties props, PropagateExceptionTypes p, final String... fileSpecs) throws FileNotFoundException, IOException {
+	public static Properties merge(final Properties props, final PropagateExceptionTypes p, final String... fileSpecs)
+			throws FileNotFoundException, IOException {
 
 		for ( final String fileSpec : fileSpecs ) {
 			Logger.debug("scanning: {} ...", fileSpec) ;
@@ -115,7 +116,7 @@ public class Props {
 		try {
 			return merge(clazz, new Properties(), PropagateException, clazz.getSimpleName() + ".properties") ;
 		}
-		catch ( IOException e ) {}
+		catch ( final IOException e ) {}
 
 		return null ;
 	}
@@ -126,7 +127,7 @@ public class Props {
 		try {
 			return merge(clazz, new Properties(), PropagateException, rSpecs) ;
 		}
-		catch ( IOException e ) {}
+		catch ( final IOException e ) {}
 
 		return null ;
 	}
@@ -137,7 +138,7 @@ public class Props {
 		try {
 			return merge(clazz, props, PropagateException, clazz.getSimpleName() + ".properties") ;
 		}
-		catch ( IOException e ) {}
+		catch ( final IOException e ) {}
 
 		return null ;
 	}

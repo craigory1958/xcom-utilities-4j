@@ -59,7 +59,7 @@ public class PooledDataSource implements DataSource {
 
 	}
 
-	
+
 	//
 	// DataSource implementation ...
 	//

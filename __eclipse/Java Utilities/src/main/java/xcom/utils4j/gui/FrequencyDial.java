@@ -52,7 +52,7 @@ public class FrequencyDial extends Dial<LocalDateTime> {
 
 			final LocalDateTime cBeg = events.get(events.size() - 2) ;
 			final LocalDateTime cEnd = events.get(events.size() - 1) ;
-			curValue = 1.0f / (float) ChronoUnit.MILLIS.between(cBeg, cEnd) ;
+			curValue = 1.0f / ChronoUnit.MILLIS.between(cBeg, cEnd) ;
 
 			final LocalDateTime aBeg = events.stream().min(Comparator.naturalOrder()).orElse(null) ;
 			final LocalDateTime aEnd = events.stream().max(Comparator.naturalOrder()).orElse(null) ;
