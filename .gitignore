@@ -1,8 +1,7 @@
 
-.classpath
-.factorypath
-.project
 
-.settings/
-src/test/resources/
-target/
+**/.metadata/**/*
+**/.settings/**/*
+**/target/**/*
+
+**/__Testomatic/**/*
