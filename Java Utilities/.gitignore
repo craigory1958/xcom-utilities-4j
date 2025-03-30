@@ -1,9 +1,8 @@
 
 
-*.classpath
-*.factorypath
-*.project
-
 .settings/
-bin/
 target/
+
+.classpath
+.factorypath
+.project
