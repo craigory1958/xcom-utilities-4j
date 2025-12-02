@@ -4,5 +4,6 @@
 .settings/
 target/
 
+.factorypath
 .classpath
 .project
